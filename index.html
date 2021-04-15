@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <title>Pig Dice Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1 class="game-title">PIG DICE GAME</h1>
+      <div class="player1-container">
+        <h1 class="title">PLAYER 1</h1>
+        <div class="current-score">Current score</div>
+      </div>
+      <div class="middle-settings-container">
+        <h1 class="title">Please Set</h1>
+        <input
+          type="text"
+          class="settings-inputs"
+          id="player1-name"
+          placeholder="Player1 Name"
+        />
+        <input
+          type="text"
+          class="settings-inputs"
+          id="player2-name"
+          placeholder="Player2 Name"
+        />
+        <input
+          type="text"
+          class="settings-inputs"
+          id="winning-value"
+          placeholder="Winning Value"
+        />
+        <button id="start-game">Start Game</button>
+      </div>
+      <div class="player2-container">
+        <h1 class="title">PLAYER 2</h1>
+        <div class="current-score">Current score</div>
+      </div>
+      <!-- Bottom container to control the positioning of the game instructions -->
+      <div class="bottom">
+        <!-- Game instructions hidden by default -->
+        <div id="game-instructions">
+          <h2 class="title">HOW TO PLAY PIG DICE GAME</h2>
+          <div class="text">
+            <p>Text 1</p>
+            <p>Text 2</p>
+            <p>Text 3</p>
+            <p>Text 4</p>
+            <p>Text 5</p>
+            <p>Text 6</p>
+            <p>Text 7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the document height to that of
+the whole screen */
+html,
+body {
+  height: 100vh;
+}
+
+/* 
+Center the .game-container in the body
+horizontally
+*/
+body {
+  display: flex;
+  justify-content: center;
+  padding: 64px;
+  font-family: sans-serif;
+}
+
+/* Container with blue-ish color */
+.game-container {
+  width: 80%;
+  height: max-content;
+  padding: 16px;
+  padding-bottom: 180px;
+  border-radius: 6px;
+  background-color: rgb(5, 4, 37);
+  color: white;
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title title"
+    "player1 settings player2"
+    "bottom bottom bottom";
+  text-align: center;
+}
+
+/* title- PIG DICE GAME */
+h1.game-title {
+  grid-area: title;
+  margin-bottom: 24px;
+  color: azure;
+  text-decoration: solid;
+  text-shadow: 2px 2px;
+}
+
+/* Left container for player 1 */
+div.player1-container {
+  grid-area: player1;
+}
+
+/* Middle container for settings  */
+div.middle-settings-container {
+  grid-area: settings;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The title in the middle settings container- Please Set */
+div.middle-settings-container .title {
+  margin-bottom: 16px;
+}
+
+/* The inputs in the middle settings container */
+input.settings-inputs {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  text-align: center;
+}
+
+/* The button to start the game */
+button#start-game {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  width: max-content;
+  color: white;
+  background-color: rgb(121, 6, 44);
+  font-size: 1em;
+}
+
+/* Player 2 container on the right */
+.player2-container {
+  grid-area: player2;
+}
+
+/* Apply these same related stylings for 
+both Player 1 and Player 2 containers */
+.player1-container,
+.player2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+/* 
+Controls the position
+of the game instructions
+*/
+.bottom {
+  grid-area: bottom;
+  position: relative;
+  height: 50px;
+  /* background: #000; */ /* uncomment to see*/
+  padding-top: 12px;
+}
+/* 
+Container for Game instructions
+- hidden by default
+*/
+div#game-instructions {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  color: white;
+  background-color: rgb(233, 10, 47);
+  padding: 16px;
+  border-radius: 6px;
+}
+/* Class to show the game instructions */
+div#game-instructions.show {
+  display: block;
+}
